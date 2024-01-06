@@ -86,3 +86,20 @@ nav{
     height: 250px;
     width: 250px;
 }
+
+/* add new user */
+.add_container{
+    margin: 30px 200px;
+}
+.input_field{
+    padding: 10px;
+    width: 70%;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(203, 198, 198);
+    box-shadow: 4px 4px 8px gray;
+}
+.input_field:hover{
+    background-color: white;
+}

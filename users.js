@@ -56,3 +56,65 @@ const singleUserDetails = () => {
             })
 }
 singleUserDetails()
+
+// Add a new user
+const addNewUser = (event) => {
+    event.preventDefault()
+    username = document.getElementById("username").value
+    firstname = document.getElementById("firstname").value
+    lastname = document.getElementById("lastname").value
+    email = document.getElementById("email").value
+    password = document.getElementById("password").value
+    city = document.getElementById("city").value
+    street = document.getElementById("street").value
+    zipcode = document.getElementById("zipcode").value
+    number = document.getElementById("number").value
+    lat = document.getElementById("lat").value
+    long = document.getElementById("long").value
+    phone = document.getElementById("phone").value
+
+    const info = {
+        username,
+        firstname,
+        lastname,
+        email,
+        password,
+        city,
+        street,
+        zipcode,
+        number, 
+        phone,
+        lat,
+        long,
+    }
+    // console.log(info)
+    fetch('https://fakestoreapi.com/users',{
+            method:"POST",
+            headers: { "content-type": "application/json" },
+            body:JSON.stringify(
+                {
+                    email:email,
+                    username:username,
+                    password:password,
+                    name:{
+                        firstname:firstname,
+                        lastname:lastname
+                    },
+                    address:{
+                        city:city,
+                        street:street,
+                        number:number,
+                        zipcode:zipcode,
+                        geolocation:{
+                            lat:lat,
+                            long:long
+                        }
+                    },
+                    phone: phone
+                }
+            )
+        })
+            .then(res=>res.json())
+            .then(json=>console.log(json))
+}
+

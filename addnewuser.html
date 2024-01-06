@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice</title>
+    <!-- Add css Link -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  </head>
+
+  <body>
+    <header>
+
+        <!-- Navbar -->
+
+      <nav class="d-flex justify-content-around align-items-center p-4">
+        <div class="logo-container d-flex align-items-center gap-2">
+          <h3>ProductsHaven</h3>
+        </div>
+        <div class="menu-container d-flex gap-3 list-unstyled">
+          <li class="menu"><a class="text-decoration-none" href="index.html">Home</a></li>
+          <li class="menu"><a class="text-decoration-none" href="users.html">All-Users</a></li>
+          <li class="menu"><a class="text-decoration-none" href="addnewuser.html">Add-User</a></li>
+          <li class="menu"><a class="text-decoration-none" href="login.html">Login</a></li>
+        </div>
+      </nav>
+
+
+    </header>
+
+    <main>
+        
+        <div class="add_container">
+            <form action="" onsubmit="addNewUser(event)">
+            
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Enter your Username</span>
+                <input id="username" type="text" class="form-control p-3" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Enter your Email</span>
+                <input id="email" type="email" class="form-control p-3" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Enter your password</span>
+                <input id="password" type="password" class="form-control p-3" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Enter your firstname</span>
+                <input id="firstname" type="text" class="form-control p-3" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Enter your lastname</span>
+                <input id="lastname" type="text" class="form-control p-3" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Enter your city</span>
+                <input id="city" type="text" class="form-control p-3" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Enter your street</span>
+                <input id="street" type="text" class="form-control p-3" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Enter your number</span>
+                <input id="number" type="text" class="form-control p-3" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Enter your zipcode</span>
+                <input id="zipcode" type="text" class="form-control p-3" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Enter your Geo-Location lat</span>
+                <input id="lat" type="text" class="form-control p-3" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Enter your Geo-Location long</span>
+                <input id="long" type="text" class="form-control p-3" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Enter your phone number</span>
+                <input id="phone" type="text" class="form-control p-3" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            </div>
+            
+
+            <br>
+            <button type="submit" class="btn btn-info p-2" value="registration">Submit</button>
+        </div>
+    </form>
+
+       
+
+
+    </main>
+
+
+    <!-- Add script Link -->
+    <script src="app.js"></script>
+    <script src="users.js"></script>
+    <script src="productDetails.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
