@@ -80,3 +80,9 @@ nav{
     padding: 20px;
     box-shadow: 4px 4px 8px gray;
 }
+
+/* single user details*/
+.user_img{
+    height: 250px;
+    width: 250px;
+}
