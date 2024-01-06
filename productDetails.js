@@ -4,7 +4,7 @@ const desplaysingleproduct = () => {
     fetch(`https://fakestoreapi.com/products/${param}`)
             .then(res=>res.json())
             .then(data=> {
-                // console.log(data)
+                console.log(data)
                 // console.log(param)
                 displayDetails(data)
             })

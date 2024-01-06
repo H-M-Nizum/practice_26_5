@@ -43,7 +43,7 @@ const loadcategory = () => {
 }
 const displaycategory = (categories) => {
     categories?.forEach((category) => {
-        // console.log(category);
+        console.log(category);
         const parent = document.getElementById("category");
         const div = document.createElement("div");
         // div.classList.add("category-card");
@@ -63,7 +63,7 @@ const getSpecificCategory = (category) => {
     fetch(`https://fakestoreapi.com/products/category/${category}`)
             .then(res=>res.json())
             .then(data=>{
-                // console.log(data)
+                console.log(data)
                 document.getElementById("products").innerHTML = "";
                 displyproduct(data)
             })
