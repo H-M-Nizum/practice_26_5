@@ -29,7 +29,7 @@ const singleUserDetails = () => {
     fetch(`https://fakestoreapi.com/users/${param}`)
             .then(res=>res.json())
             .then(iteam=>{
-                // console.log(iteam)
+                console.log(iteam)
                 const parent = document.getElementById("user_details")
                 const div = document.createElement("div")
                 div.innerHTML = `            <div class="userdetails d-flex justify-content-center gap-5" id="userdetails">
@@ -118,3 +118,38 @@ const addNewUser = (event) => {
             .then(json=>console.log(json))
 }
 
+const userlogin = (event) => {
+    event.preventDefault();
+    const username = document.getElementById("userName").value;
+    const password = document.getElementById("Password").value;
+    console.log(username, password);
+    if ((username, password)) {
+        document.getElementById("error").innerHTML=""
+        fetch('https://fakestoreapi.com/auth/login',{
+            method:'POST',
+            headers: { "content-type": "application/json" },
+            body:JSON.stringify({
+                username: username,
+                password: password
+            })
+        })
+            .then(res=>res.json())
+            .then((data) => {
+                console.log(data);
+        
+                if (data.token && data.user_id) {
+                    
+                  localStorage.setItem("token", data.token);
+                  localStorage.setItem("user_id", data.user_id);
+                }
+                else{
+                    document.getElementById("error").innerText="Invalid username and password"
+                }
+                window.location.href = "index.html";
+              });
+           
+            }
+            else{
+                document.getElementById("error").innerText="Invalid username and password"
+            }
+  };
